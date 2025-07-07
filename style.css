@@ -1,0 +1,118 @@
+/* Basic Reset and Font Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main Poster Container */
+.poster-container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+/* Header Styling */
+.poster-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+}
+
+.poster-header h1 {
+    font-size: 2.5rem;
+    color: #0d2c4b;
+    margin-bottom: 10px;
+}
+
+.poster-header p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid for the Tips using Flexbox */
+.tips-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on small screens */
+    justify-content: center;
+    gap: 25px; /* Space between cards */
+}
+
+/* Individual Tip Card Styling */
+.tip-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Flexbox properties for each card */
+    flex-grow: 1; /* Allow cards to grow */
+    flex-shrink: 1; /* Allow cards to shrink */
+    flex-basis: 280px; /* Ideal starting width for each card */
+    max-width: 350px;
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tip-card img {
+    height: 64px; /* Fixed height for icons */
+    margin-bottom: 20px;
+}
+
+.tip-card h2 {
+    font-size: 1.25rem;
+    color: #005a8d;
+    margin-bottom: 10px;
+}
+
+.tip-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Footer Styling */
+.poster-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-weight: 700;
+    color: #0d2c4b;
+    font-size: 1.2rem;
+}
+
+/* Mobile-Friendly Layout */
+@media (max-width: 768px) {
+    .poster-container {
+        padding: 20px;
+    }
+
+    .poster-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .poster-header p {
+        font-size: 1rem;
+    }
+}
